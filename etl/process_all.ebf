@@ -1,0 +1,5 @@
+run 'load_customers.ctl'
+run 'load_orders.ctl'
+run 'load_products.ctl'
+run 'load_products_to_file.ctl'
+run 'load_product_levels.ctl'

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+
+    <div id="container">
+		<div id="header">
+		<table>
+		<tr><td>
+				<%= link_to image_tag("cupcake-logo.jpg"), :controller => "application", :action => "index", :title => "Return to the home page" %>
+		</td><td>
+		<ol class="menu">
+			<li><%= link_to "Products", :controller => "products", :action => "index" %></li>
+			<li><%= link_to "Customers", :controller => "customers", :action => "index" %></li>
+			<li><%= link_to "Orders", :controller => "orders", :action => "index" %></li>
+			<li><%= link_to "Reporting", :controller => "reports", :action => "index" %></li>
+		</ol>
+		</td></tr>
+		</table>
+		</div>
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      
+      <%- if show_title? -%>
+        <h1><%=h yield(:title) %></h1>
+      <%- end -%>
+      
+      <%= yield %>
+    </div>
+  </body>
+</html>

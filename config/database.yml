@@ -1,0 +1,16 @@
+etl_execution:
+  adapter: postgresql
+  database: cupcakesinc_etl_execution
+  username: awadmin
+  password: awadmin
+  host: localhost
+  encoding: utf8
+
+development:
+  adapter: postgresql
+  database: cupcakesinc_productexpand_source
+  username: awadmin
+  password: awadmin
+  host: localhost
+  pool: 5
+  timeout: 5000

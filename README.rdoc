@@ -1,0 +1,14 @@
+Cupcakesinc-transactional
+
+This is the first of 3 example projects for Activewarehouse-etl and Mondrian Olap.
+
+Cupcakesinc-etl: https://github.com/DaveTD/Cupcakesinc-etl
+Cupcakesinc-mondrian: https://github.com/DaveTD/Cupcakesinc-mondrian
+
+This project is representative of a transactional system which would be used to collect the transactional information of Cupcake Inc's sales.
+
+There have been some changes from the original Cupcakeincs project setup, but the web page related to this project has NOT been updated.  This project relies on the etl from several csv files located in the etl/source_data/ directory, and the ctl files located in the etl/ folder.
+
+After setting up the database as described in the config/databases.yml file, and updating your gems, load the transactional database with the following command:
+
+etl etl/process_all.ebf
